@@ -1,0 +1,57 @@
+$mainColor: #363838;
+$contentColor: #707070;
+
+$boldText: Montserrat, sans-serif;
+
+
+* {
+  box-sizing: border-box;
+
+}
+
+body{
+  background-color: white;
+  color: #515151;
+  font-size: 16px;
+  margin: 0;
+}
+
+
+.container {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+header {
+  padding: 20px 0;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.nav {
+  color: $mainColor;
+  font-family: $boldText;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+    &_block {
+      align-items: center;
+      display: flex;
+      &_content {
+        color: $mainColor;
+        text-decoration: none;
+        margin: 0 40px;
+
+      }
+    }
+}
+.burger {
+  background-color: transparent;
+  border: transparent;
+  &_svg {
+    width: 93px;
+    height: 31px;
+    display: inline-block;
+    cursor: pointer;
+  }
+}
