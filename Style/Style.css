@@ -7,6 +7,7 @@ body {
   color: #515151;
   font-size: 16px;
   margin: 0;
+  font-family: "Open sans", sans-serif;
 }
 
 .container {
@@ -49,4 +50,42 @@ header {
   height: 31px;
   display: inline-block;
   cursor: pointer;
+}
+
+.swiper_block {
+  width: 100%;
+  background-image: url("/image/home/slider/slider_bg.jpg");
+  display: flex;
+  align-items: center;
+  background-repeat: no-repeat;
+}
+
+.swiper-pagination-bullet-active {
+  background: yellow;
+}
+
+.swiper-pagination-bullet {
+  background: dimgrey;
+}
+
+.swiper_img {
+  width: 703px;
+  height: 815px;
+}
+.swiper_content {
+  max-width: 640px;
+}
+.swiper_title {
+  font-family: Montserrat, sans-serif;
+  color: #363838;
+  font-size: 110px;
+}
+.swiper_hr {
+  width: 200px;
+  background-color: grey;
+  margin: 20px 0;
+}
+.swiper_text {
+  font-size: 16px;
+  font-weight: 500;
 }
