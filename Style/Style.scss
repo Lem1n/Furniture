@@ -31,8 +31,8 @@ header {
 .nav {
   color: $mainColor;
   font-family: $boldText;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
     &_block {
       align-items: center;
@@ -44,6 +44,9 @@ header {
 
       }
     }
+  &_img {
+    justify-self: center;
+  }
 }
 .burger {
   background-color: transparent;

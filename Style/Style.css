@@ -23,8 +23,8 @@ header {
 .nav {
   color: #363838;
   font-family: Montserrat, sans-serif;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
 }
 .nav_block {
@@ -35,6 +35,9 @@ header {
   color: #363838;
   text-decoration: none;
   margin: 0 40px;
+}
+.nav_img {
+  justify-self: center;
 }
 
 .burger {
