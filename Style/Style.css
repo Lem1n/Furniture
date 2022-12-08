@@ -7,10 +7,15 @@
 
 body {
   background-color: white;
-  color: #515151;
+  color: #5A5A5A;
   font-size: 16px;
   margin: 0;
   font-family: "Open sans", sans-serif;
+}
+
+.title {
+  font-family: Montserrat, sans-serif;
+  color: #363838;
 }
 
 .container {
@@ -19,7 +24,6 @@ body {
 }
 .container_fluid {
   max-width: 1920px;
-  padding: 0 15px;
 }
 
 header {
@@ -85,8 +89,6 @@ header {
   max-width: 640px;
 }
 .swiper_title {
-  font-family: Montserrat, sans-serif;
-  color: #363838;
   font-size: 110px;
 }
 .swiper_hr {
@@ -104,10 +106,6 @@ header {
   max-width: 730px;
   margin: 0 auto;
 }
-.furniture_info_title {
-  color: #363838;
-  font-family: Montserrat, sans-serif;
-}
 .furniture_info_text {
   font-weight: 700;
 }
@@ -115,11 +113,6 @@ header {
   background-color: grey;
   width: 200px;
   margin: 20px auto 15px;
-}
-.furniture_hr_img {
-  background-color: grey;
-  width: 200px;
-  margin: 15px auto 20px;
 }
 .furniture_content {
   display: flex;
@@ -153,9 +146,21 @@ header {
   position: absolute;
 }
 .furniture_img_title {
-  font-family: Montserrat, sans-serif;
-  color: #363838;
   font-size: 20px;
+  padding-bottom: 19px;
+  margin-bottom: 19px;
+  position: relative;
+}
+.furniture_img_title::after {
+  background: grey;
+  width: 60%;
+  margin: 0 auto;
+  height: 1px;
+  content: "";
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
 }
 .furniture_img_text {
   font-size: 14px;
@@ -170,4 +175,106 @@ header {
   display: block;
   opacity: 1;
   transition: .5s;
+}
+
+.decor {
+  background-image: url("/image/home/decor/decor_bg.jpg");
+  background-repeat: no-repeat;
+  height: 100%;
+}
+.decor_content {
+  max-width: 540px;
+  padding: 170px 0 160px;
+  margin-right: 20px;
+}
+.decor_title {
+  font-size: 60px;
+  position: relative;
+  margin-bottom: 19px;
+  padding-bottom: 19px;
+}
+.decor_title::after {
+  background: grey;
+  width: 200px;
+  height: 1px;
+  content: "";
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+}
+
+.works_title {
+  font-size: 36px;
+  display: flex;
+  justify-content: center;
+  padding: 80px 0 20px;
+}
+
+.works_path_content {
+  justify-content: center;
+}
+.works_path_container {
+  display: flex;
+  align-items: flex-end;
+}
+.works_path_img {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.works_path_box {
+  width: 50%;
+  position: relative;
+}
+.works_path_box_after_line_standard::after, .works_path_box_after_line_reverse::after {
+  height: 20px;
+  background: grey;
+  width: 2px;
+  content: "";
+  position: absolute;
+}
+.works_path_box_after_line_standard::after {
+  left: 0;
+  bottom: 0;
+}
+.works_path_box_after_line_reverse::after {
+  right: 50%;
+  top: 0;
+}
+.works_path_block {
+  max-width: 270px;
+  position: relative;
+  margin: 35px 0;
+}
+.works_path_line {
+  background: grey;
+  width: 100%;
+  height: 2px;
+  position: relative;
+}
+.works_path_line::before, .works_path_line::after {
+  content: "";
+  bottom: -4px;
+  width: 10px;
+  height: 10px;
+  background: #363636;
+  position: absolute;
+  border-radius: 5px;
+}
+.works_path_line::before {
+  left: 0;
+}
+.works_path_line::after {
+  right: 0;
+  opacity: .8;
+}
+.works_path_title {
+  padding: 5px 0 0 45px;
+  margin-bottom: 15px;
+}
+
+.works_right {
+  display: flex;
+  justify-content: right;
 }
