@@ -90,11 +90,19 @@ header {
 }
 .swiper_title {
   font-size: 110px;
+  position: relative;
+  padding-bottom: 19px;
+  margin-bottom: 19px;
 }
-.swiper_hr {
+.swiper_title::after {
+  background: grey;
   width: 200px;
-  background-color: grey;
-  margin: 20px 0;
+  height: 1px;
+  content: "";
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
 }
 .swiper_text {
   font-weight: 500;
@@ -109,10 +117,22 @@ header {
 .furniture_info_text {
   font-weight: 700;
 }
-.furniture_info_hr {
-  background-color: grey;
+.furniture_info_title {
+  position: relative;
+  padding-bottom: 19px;
+  margin-bottom: 19px;
+  font-size: 36px;
+}
+.furniture_info_title::after {
+  background: grey;
   width: 200px;
-  margin: 20px auto 15px;
+  height: 1px;
+  content: "";
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  margin: 0 auto;
 }
 .furniture_content {
   display: flex;
