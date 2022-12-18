@@ -49,8 +49,23 @@ header {
       &_content {
         color: $mainColor;
         text-decoration: none;
-        margin: 0 40px;
-
+        margin: 0 40px 5px;
+        line-height: 25px;
+        &:after {
+          transition: 0.3s ease-out;
+          content: "";
+          display: block;
+          width: 100%;
+          height: 2px;
+          background: #979797;
+          position: relative;
+          bottom: 0;
+          border-radius: 1px;
+          transform: scale(0, 1);
+        }
+        &:hover:after {
+          transform: scale(1, 1)
+        }
       }
     }
   &_img {
@@ -336,6 +351,255 @@ header {
   display: flex;
   justify-content: right;
 }
+
+
+
+.works {
+    padding: 60px 0;
+  &_nav {
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+    display: flex;
+    &_link {
+      opacity: .6;
+      color: $mainColor;
+      border: $mainColor solid 1px;
+      border-radius: 18px;
+      padding: 8px 16px;
+      margin: 0 12px;
+      font-size: 14px;
+      background-color: transparent;
+      cursor: pointer;
+      &:hover {
+        opacity: 1;
+        transition: .2s;
+        border: #FFEF35 1px solid;
+        background-color: #FFEF35;
+      }
+      & .active {
+        opacity: 1;
+        border: #FFEF35;
+        background-color: #FFEF35;
+      }
+    }
+  }
+  &_block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &_img {
+    margin: 10px;
+  }
+  &_small_block {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+}
+
+.ideas_blog {
+  padding-bottom: 60px;
+
+  &_inner {
+    text-align: center;
+  }
+  &_title {
+    font-size: 36px;
+    max-width: 430px;
+    margin: 0 auto;
+  }
+  &_block {
+    display: flex;
+    justify-content: center;
+  }
+
+  &_content {
+    max-width: 540px;
+    text-align: left;
+    margin: 40px 15px;
+  }
+  &_description {
+    display: flex;
+    margin: 20px 0;
+    font-size: 14px;
+    font-weight: 700;
+    &_author {
+      padding: 0 8px;
+      margin: 0 8px;
+      border-left: grey solid 1px;
+      border-right: grey solid 1px;
+    }
+  }
+  &_text {
+    font-size: 24px;
+  }
+
+}
+
+
+
+.footer {
+  text-align: center;
+  &_content {
+    background-color: #DFDFDF;
+    padding: 60px 0 80px;
+    text-align: left;
+    &_inner {
+      display: flex;
+      justify-content: space-between;
+
+    }
+  }
+
+  &_contact{
+    max-width: 480px;
+    &_text{
+      margin: 15px 0;
+    }
+    &_mail {
+      transition: .2s;
+      display: flex;
+      color: $mainColor;
+      font-family: $boldText;
+      text-decoration: none;
+      &:hover {
+        transition: .2s;
+        color: white;
+      }
+
+      &_text {
+        padding-left: 15px;
+      }
+    }
+
+    &_subscribe {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+
+      &_input {
+        padding: 10px 120px 10px 20px;
+        background-color: transparent;
+        border: 1px $mainColor solid;
+        border-radius: 15px;
+        &:focus {
+          border: 1px $mainColor solid;
+        }
+      }
+      &_btn {
+        background-color: $mainColor;
+        color: white;
+        padding: 5px 60px;
+        border: 2px $mainColor solid;
+        border-radius: 15px;
+        cursor: pointer;
+        transition: .2s;
+        font-weight: 700;
+        &:hover {
+          box-shadow: 0 0 15px $mainColor;
+          transition: .2s;
+        }
+      }
+    }
+
+  }
+
+
+  &_social {
+    display: flex;
+
+    flex-direction: column;
+    &_block {
+      display: flex;
+      align-items: center;
+
+    }
+    &_link {
+      text-decoration: none;
+      color: #707070;
+      line-height: 35px;
+      padding-left: 10px;
+      font-weight: 700;
+    }
+    &_svg {
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  &_info {
+    display: flex;
+    flex-direction: column;
+
+    &_link {
+      line-height: 35px;
+      text-decoration: none;
+      color: #707070;
+      font-weight: 700;
+      transition: .2s;
+      &:hover {
+        color: $mainColor;
+        transition: .2s;
+      }
+    }
+  }
+
+
+  &_copyright {
+    margin: 0 auto;
+    background-color: $mainColor;
+    padding: 40px 0;
+  }
+}
+
+.facebook {
+  transition: all;
+  &:hover .facebook_svg {
+    color: dodgerblue;
+  }
+  &:hover #facebook {
+    fill: dodgerblue;
+  }
+}
+.inst {
+  transition: all;
+  &:hover .inst_svg {
+    color: #b92fc2;
+  }
+  &:hover #inst {
+    fill: #b92fc2;
+  }
+}
+.pinterest {
+  transition: all;
+  &:hover .pinterest_svg {
+    color: red;
+  }
+  &:hover #pinterest {
+    fill: red;
+  }
+}
+.whatsapp {
+  transition: all;
+  &:hover .whatsapp_svg {
+    color: #1db41d;
+  }
+  &:hover #whatsapp {
+    fill: #1db41d;
+  }
+}
+.youtube {
+  transition: all;
+  &:hover .youtube_svg {
+    color: red;
+  }
+  &:hover #youtube {
+    fill: red;
+  }
+}
+
 
 
 
