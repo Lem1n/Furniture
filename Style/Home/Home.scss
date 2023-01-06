@@ -24,7 +24,7 @@ body{
 }
 
 .container {
-  max-width: 1150px;
+  max-width: 1110px;
   margin: 0 auto;
   &_fluid{
     max-width: 1920px;
@@ -316,6 +316,7 @@ header {
     max-width: 270px;
     position: relative;
     margin: 35px 0;
+
   }
 
   &_line {
@@ -371,13 +372,15 @@ header {
       font-size: 14px;
       background-color: transparent;
       cursor: pointer;
+      transition: .2s;
       &:hover {
         opacity: 1;
         transition: .2s;
         border: #FFEF35 1px solid;
         background-color: #FFEF35;
       }
-      & .active {
+      &.active {
+        transition: .5s;
         opacity: 1;
         border: #FFEF35;
         background-color: #FFEF35;
@@ -385,9 +388,12 @@ header {
     }
   }
   &_block {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
+    &.active {
+      display: flex;
+    }
   }
 
   &_img {
@@ -514,7 +520,7 @@ header {
     &_block {
       display: flex;
       align-items: center;
-
+      margin: 2px 0;
     }
     &_link {
       text-decoration: none;
@@ -522,6 +528,7 @@ header {
       line-height: 35px;
       padding-left: 10px;
       font-weight: 700;
+      transition: .2s;
     }
     &_svg {
       width: 15px;
