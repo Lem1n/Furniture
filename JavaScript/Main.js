@@ -14,8 +14,8 @@ const swiper = new Swiper('.swiper', {
 });
 
 let tabs = document.querySelector('.tabs')
-let btns = tabs.querySelectorAll('.works_nav_link')
-let items = tabs.querySelectorAll('.works_block')
+let btns = tabs.querySelectorAll('.work_nav_link')
+let items = tabs.querySelectorAll('.work_block')
 
 function change(arr, i) {
     arr.forEach( item => {
