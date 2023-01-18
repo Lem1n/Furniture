@@ -153,9 +153,9 @@ header {
       .footer_contact_subscribe_btn {
         background-color: #363838;
         color: white;
-        padding: 5px 60px;
+        padding: 10px 60px;
         border: 2px #363838 solid;
-        border-radius: 15px;
+        border-radius: 20px;
         cursor: pointer;
         transition: .2s;
         font-weight: 700; }
