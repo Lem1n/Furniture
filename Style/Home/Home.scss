@@ -4,6 +4,14 @@ $contentColor: #707070;
 $boldText: Montserrat, sans-serif;
 
 
+ul {
+  padding: 0;
+}
+li::marker {
+  content: "";
+}
+
+
 * {
   box-sizing: border-box;
   h1,h2,h3,h4, p {
@@ -335,7 +343,7 @@ header {
       bottom: -4px;
       width: 10px;
       height: 10px;
-      background: #363636;
+      background: $mainColor;
       position: absolute;
       border-radius: 5px;
     }
@@ -529,7 +537,7 @@ header {
     }
     &_link {
       text-decoration: none;
-      color: #707070;
+      color: $contentColor;
       line-height: 35px;
       padding-left: 10px;
       font-weight: 700;
@@ -548,7 +556,7 @@ header {
     &_link {
       line-height: 35px;
       text-decoration: none;
-      color: #707070;
+      color: $contentColor;
       font-weight: 700;
       transition: .2s;
       &:hover {

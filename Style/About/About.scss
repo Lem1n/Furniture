@@ -4,6 +4,14 @@ $contentColor: #707070;
 $boldText: Montserrat, sans-serif;
 
 
+ul {
+  padding: 0;
+}
+li::marker {
+  content: "";
+}
+
+
 * {
   box-sizing: border-box;
   h1,h2,h3,h4, p {
@@ -91,14 +99,30 @@ header {
 }
 
 .breadcrumbs {
+  position: absolute;
+  opacity: .5;
+  top: 0;
+  width: 100%;
   font-size: 14px;
   background: #f2f2f2;
-  padding: 14px 405px;
+  &_list {
+    display: flex;
+    padding: 4px 0;
+  }
+  &_item {
+
+  }
+  &_link {
+    text-decoration: none;
+    color: #5A5A5A;
+    padding: 0 2px;
+  }
 }
 
 
 
 .placeholder {
+  position: relative;
 
   &_text {
     margin: 0 auto;
@@ -257,7 +281,7 @@ header {
   }
 }
 #details_line_80::after {
-  background: #363636;
+  background: $mainColor;
   width: 700px;
   height: 2px;
   content: "";
@@ -268,7 +292,7 @@ header {
   border-radius: 1px;
 }
 #details_line_70::after {
-  background: #363636;
+  background: $mainColor;
   width: 560px;
   height: 2px;
   content: "";
@@ -279,7 +303,7 @@ header {
   border-radius: 1px;
 }
 #details_line_75::after {
-  background: #363636;
+  background: $mainColor;
   width: 640px;
   height: 2px;
   content: "";
@@ -290,7 +314,7 @@ header {
   border-radius: 1px;
 }
 #details_line_40::after {
-  background: #363636;
+  background: $mainColor;
   width: 300px;
   height: 2px;
   content: "";
@@ -482,7 +506,7 @@ header {
 
     &_link {
       text-decoration: none;
-      color: #707070;
+      color: $contentColor;
       line-height: 35px;
       padding-left: 10px;
       font-weight: 700;
@@ -502,7 +526,7 @@ header {
     &_link {
       line-height: 35px;
       text-decoration: none;
-      color: #707070;
+      color: $contentColor;
       font-weight: 700;
       transition: .2s;
 

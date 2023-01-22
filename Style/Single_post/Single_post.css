@@ -1,3 +1,9 @@
+ul {
+  padding: 0; }
+
+li::marker {
+  content: ""; }
+
 * {
   box-sizing: border-box; }
   * h1, * h2, * h3, * h4, * p {
@@ -69,9 +75,16 @@ header {
     cursor: pointer; }
 
 .breadcrumbs {
+  width: 100%;
   font-size: 14px;
-  background: #f2f2f2;
-  padding: 14px 405px; }
+  background: #f2f2f2; }
+  .breadcrumbs_list {
+    display: flex;
+    padding: 4px 0; }
+  .breadcrumbs_link {
+    text-decoration: none;
+    color: #5A5A5A;
+    padding: 0 2px; }
 
 .blog {
   margin: 50px 0; }
@@ -134,7 +147,7 @@ header {
       transition: .3s; }
       .blog_tags_link:hover {
         transition: .3s;
-        color: #363636;
+        color: #363838;
         border: 1px solid #FFEF35;
         background-color: #FFEF35; }
   .blog_previous {
@@ -191,7 +204,7 @@ header {
       display: grid;
       margin: 15px 0; }
     .blog_comments_content_author_name {
-      color: #363636;
+      color: #363838;
       font-size: 16px;
       text-decoration: none;
       font-weight: 700;
@@ -225,7 +238,7 @@ header {
         padding: 15px 25px 40px 20px;
         font-size: 16px; }
         .blog_comment_input_text:focus {
-          color: #363636;
+          color: #363838;
           border: none; }
       .blog_comment_input_info {
         border: 1px grey solid;
@@ -233,16 +246,20 @@ header {
         width: 360px;
         padding: 10px 15px; }
         .blog_comment_input_info:focus {
-          color: #363636;
+          color: #363838;
           border: none; }
       .blog_comment_input_submit {
         color: white;
-        background-color: #363636;
+        background-color: #363838;
         font-size: 16px;
         padding: 10px 50px;
-        border: #363636 1px solid;
+        border: #363838 1px solid;
         border-radius: 20px;
         font-weight: 600; }
+        .blog_comment_input_submit:hover {
+          box-shadow: 0 0 15px #363838;
+          transition: .2s;
+          cursor: pointer; }
   .blog_search {
     margin: 0 30px;
     width: 350px; }
@@ -250,7 +267,7 @@ header {
       padding: 8px 40px 8px 18px;
       border-radius: 50px;
       width: 350px;
-      border: 1px solid #363636; }
+      border: 1px solid #363838; }
     .blog_search_label {
       display: flex;
       align-items: center; }
@@ -323,7 +340,7 @@ header {
         transition: .3s; }
         .blog_search_tags_link:hover {
           transition: .3s;
-          color: #363636;
+          color: #363838;
           border: 1px solid #FFEF35;
           background-color: #FFEF35; }
     .blog_search_social {
@@ -352,7 +369,7 @@ textarea {
 .swiper-wrapper {
   position: relative; }
 .swiper-custom-button {
-  color: #363636;
+  color: #363838;
   cursor: pointer;
   position: absolute;
   z-index: 999; }

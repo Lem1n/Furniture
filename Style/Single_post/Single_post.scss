@@ -4,6 +4,14 @@ $contentColor: #707070;
 $boldText: Montserrat, sans-serif;
 
 
+ul {
+  padding: 0;
+}
+li::marker {
+  content: "";
+}
+
+
 * {
   box-sizing: border-box;
   h1,h2,h3,h4, p {
@@ -90,10 +98,23 @@ header {
   }
 }
 .breadcrumbs {
+  width: 100%;
   font-size: 14px;
   background: #f2f2f2;
-  padding: 14px 405px;
+  &_list {
+    display: flex;
+    padding: 4px 0;
+  }
+  &_item {
+
+  }
+  &_link {
+    text-decoration: none;
+    color: #5A5A5A;
+    padding: 0 2px;
+  }
 }
+
 
 
 .blog {
@@ -176,7 +197,7 @@ header {
       transition: .3s;
       &:hover {
         transition: .3s;
-        color: #363636;
+        color: $mainColor;
         border: 1px solid #FFEF35;
         background-color: #FFEF35;
       }
@@ -219,7 +240,7 @@ header {
       }
     }
     &_text {
-      color: #707070;
+      color: $contentColor;
     }
   }
 
@@ -258,7 +279,7 @@ header {
           margin: 15px 0;
         }
         &_name {
-          color: #363636;
+          color: $mainColor;
           font-size: 16px;
           text-decoration: none;
           font-weight: 700;
@@ -275,7 +296,7 @@ header {
 
 
         &_reply {
-          color: #707070;
+          color: $contentColor;
         }
 
       }
@@ -307,7 +328,7 @@ header {
         padding: 15px 25px 40px 20px;
         font-size: 16px;
         &:focus {
-          color: #363636;
+          color: $mainColor;
           border: none;
         }
       }
@@ -317,7 +338,7 @@ header {
         width: 360px;
         padding: 10px 15px;
         &:focus {
-          color: #363636;
+          color: $mainColor;
           border: none;
         }
       }
@@ -326,12 +347,17 @@ header {
       }
       &_submit {
         color: white;
-        background-color: #363636;
+        background-color: $mainColor;
         font-size: 16px;
         padding: 10px 50px;
-        border: #363636 1px solid;
+        border: $mainColor 1px solid;
         border-radius: 20px;
         font-weight: 600;
+        &:hover {
+          box-shadow: 0 0 15px $mainColor;
+          transition: .2s;
+          cursor: pointer;
+        }
       }
     }
   }
@@ -344,7 +370,7 @@ header {
       padding: 8px 40px 8px 18px;
       border-radius: 50px;
       width: 350px;
-      border: 1px solid #363636;
+      border: 1px solid $mainColor;
     }
     &_label {
       display: flex;
@@ -443,7 +469,7 @@ header {
         transition: .3s;
         &:hover {
           transition: .3s;
-          color: #363636;
+          color: $mainColor;
           border: 1px solid #FFEF35;
           background-color: #FFEF35;
         }
@@ -464,7 +490,7 @@ header {
       }
       &_link {
         text-decoration: none;
-        color: #707070;
+        color: $contentColor;
         line-height: 35px;
         padding-left: 10px;
         font-weight: 700;
@@ -489,7 +515,7 @@ textarea {
     position: relative;
   }
   &-custom-button {
-    color: #363636;
+    color: $mainColor;
     cursor: pointer;
     position: absolute;
     z-index: 999;
@@ -586,7 +612,7 @@ textarea {
     }
     &_link {
       text-decoration: none;
-      color: #707070;
+      color: $contentColor;
       line-height: 35px;
       padding-left: 10px;
       font-weight: 700;
@@ -605,7 +631,7 @@ textarea {
     &_link {
       line-height: 35px;
       text-decoration: none;
-      color: #707070;
+      color: $contentColor;
       font-weight: 700;
       transition: .2s;
       &:hover {
